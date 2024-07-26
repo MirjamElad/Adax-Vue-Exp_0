@@ -1,4 +1,4 @@
-# ADAX for Vue apps 
+# ADAX for Vue, a simple test app:
 
 **NB**: [Consult the code and play with the app here: ⚡️](https://stackblitz.com/~/github.com/MirjamElad/Adax-Vue-Exp_0)
 
