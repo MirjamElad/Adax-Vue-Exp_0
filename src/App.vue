@@ -3,13 +3,9 @@ import { ref, watch } from 'vue';
 import ResultPanel from './components/ResultPanel.vue';
 import FansGroup from './components/FansGroup.vue';
 
-const counter = ref(0);
-const incrementCounter = () => counter.value++;
+const duplicateGroupName = ref('Red');
+const setDuplicateGroupName = (name) => duplicateGroupName.value = name;
 
-const libName = ref(counter.value % 2 ? 'Red' : 'Blue');
-watch(counter, (newValue: number) => {
-  libName.value = newValue % 2 ? 'Red' : 'Blue';
-});
 </script>
 
 <template>
@@ -22,10 +18,18 @@ watch(counter, (newValue: number) => {
         <FansGroup name="Red" />
         <FansGroup name="Blue" />
         <br />
-        <button class="flex justify-between m-6" @click="incrementCounter">
-          Swich away from {{ libName }}
-        </button>
-        <FansGroup :name="libName" />
+        <span class="px-6">Duplicated FANS area:</span>
+        <div class="flex px-6 w-18 mt-2">
+          <label class="radio-button">
+            <input type="radio" checked name="options" value="Red" @click="setDuplicateGroupName('Red')" />
+            Red
+          </label>
+          <label class="radio-button ml-6">
+            <input type="radio" name="options" value="Blue" @click="setDuplicateGroupName('Blue')" />
+            Blue
+          </label>
+        </div>
+        <FansGroup :name="duplicateGroupName" />
       </div>
     </div>
   </div>
