@@ -1,4 +1,4 @@
-# ADAX with Vue 
+# ADAX in Vue 
 
 **NB**: [Consult the code and play with the app here: ⚡️](https://stackblitz.com/~/github.com/MirjamElad/Adax-Vue-Exp_0)
 
@@ -15,7 +15,7 @@ The example app allows FANS to vote for either Blue or Red. Notice when voting f
 
 **App** _(in: "./src/App.vue")_: The app entry point where component are imported and rendered.
 
-**Result Panel** _(in: "./src/components/ResultPanel.vue")_: Result Panel continouesly displays current score.
+**Result Panel** _(in: "./src/components/ResultPanel.vue")_: Result Panel continuously displays current score.
 
 **Fans Group** _(in: "./src/components/FansGroup.vue")_: Two instances of this component are shown in the App. One for each group/team (i.e. Red & Blue). Each allows for voting for the given group/team and shows the mood of that team. Note that this component only re-renders when applicable (i.e. when the mood changes) 
 
