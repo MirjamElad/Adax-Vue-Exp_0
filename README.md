@@ -1,4 +1,4 @@
-# ADAX in Vue 
+# ADAX for Vue apps 
 
 **NB**: [Consult the code and play with the app here: ⚡️](https://stackblitz.com/~/github.com/MirjamElad/Adax-Vue-Exp_0)
 
