@@ -1,16 +1,22 @@
-# Vue 3 + TypeScript + Vite
+# ADAX with Vue 
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**NB**: [Consult the code and play with the app here: ⚡️](https://stackblitz.com/~/github.com/MirjamElad/Adax-Vue-Exp_0)
 
-## Recommended IDE Setup
+![image](https://github.com/user-attachments/assets/1639cfdc-9808-45de-8737-502efd01f2d1)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+The example app allows FANS to vote for either Blue or Red. Notice when voting for either the results panel on top does show the updated score. At the bottom, both "FANS" areas show their respective mood with an emoji. If it's a tie both moods are neutral 😐. Otherwise, the winning team displays 😃 and the losing one 🤬. Click/Vote to see the results pannel update immediately. On the other hand, the "FANS" areas only updates if there is a "change of mood".
 
-## Type Support For `.vue` Imports in TS
+![image](https://github.com/user-attachments/assets/e9187244-7396-4d6b-94fa-fc7b2cea9142)
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+## Code overview:
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+**State** _(in: "./src/state.ts")_: The app's state/data and the functions to read/query or write/mutate it. This file also contains the app's rules!
+
+**App** _(in: "./src/App.vue")_: The app entry point where component are imported and rendered.
+
+**Result Panel** _(in: "./src/components/ResultPanel.vue")_: Result Panel continouesly displays current score.
+
+**Fans Group** _(in: "./src/components/FansGroup.vue")_: Two instances of this component are shown in the App. One for each group/team (i.e. Red & Blue). Each allows for voting for the given group/team and shows the mood of that team. Note that this component only re-renders when applicable (i.e. when the mood changes) 
+
+**NB**: [Consult the code and play with the app here: ⚡️](https://stackblitz.com/~/github.com/MirjamElad/Adax-Vue-Exp_0)
