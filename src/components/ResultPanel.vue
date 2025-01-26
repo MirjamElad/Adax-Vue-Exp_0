@@ -3,7 +3,7 @@ import { defineProps, reactive, ref } from 'vue';
 import { getResult } from '../state';
 import { useSync } from 'adax-vue';
 
-const data = useSync(getResult);
+const data = useSync(()=>[getResult]);
 </script>
 <template>
   <div

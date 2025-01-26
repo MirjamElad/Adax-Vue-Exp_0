@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { defineProps, ref, reactive, watch } from 'vue';
 import { getMood, voteFor, getResult } from '../state';
-import { trigger } from 'adax';
-import { useSync } from 'adax-vue';
+import { useSync, trigger } from 'adax-vue';
 
 const props = defineProps(['name']);
 
-const data = useSync(getMood, () => ({ name: props.name }));
+const data = useSync(() => [getMood, ({ name: props.name })]);
 function vote() {
   trigger(voteFor, { name: props.name });
 }

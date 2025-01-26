@@ -8,8 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "adax": "^0.0.39",
-    "adax-vue": "^0.0.25",
+    "adax-vue": "^0.1.17",
     "vue": "^3.4.21"
   },
   "devDependencies": {
